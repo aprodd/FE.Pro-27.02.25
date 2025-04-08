@@ -1,16 +1,14 @@
 let inpStr = prompt('Введіть рядок');
-let inpSym = prompt('Введіть символ');
+let inpSym = prompt('Введіть символ').split('');
 
-function delSymbol(str, sym) {
-   for (let i = 0; i < str.length; i++) {
-      if (str[i] === sym) {
-         str = str.split(sym).join('');
+function delSymbol(string, symbols) {
+   let res = '';
+   for (let i = 0; i < string.length; i++) {
+      if(symbols.includes(string[i]) !== true) {
+         res += string[i];
       }
    }
-   return str;
+   return res;
 }
 
 delSymbol(inpStr, inpSym);
-
-
-
