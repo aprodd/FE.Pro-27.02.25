@@ -2,11 +2,13 @@ const userInfo = {
     name: 'Adam',
     age: 30,
     city: 'Boston',
-    sport: 'boxing'
+    sport: 'boxing',
+    method() {
+        console.log(this.name);
+        console.log(this.age);
+        console.log(this.city);
+        console.log(this.sport);
+    }
 };
 
-let arrKeys = Object.keys(userInfo);
-let arrValues = Object.values(userInfo);
-
-console.log(arrKeys);
-console.log (arrValues);
+userInfo.method();
