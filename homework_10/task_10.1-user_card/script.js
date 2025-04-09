@@ -3,11 +3,9 @@ const userInfo = {
     age: 30,
     city: 'Boston',
     sport: 'boxing',
-    method() {
-        console.log(this.name);
-        console.log(this.age);
-        console.log(this.city);
-        console.log(this.sport);
+    method: function() {
+        let result = `${this.name} ${this.age} ${this.city} ${this.sport}`
+        return result;
     }
 };
 
