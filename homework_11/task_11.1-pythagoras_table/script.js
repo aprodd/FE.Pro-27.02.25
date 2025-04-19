@@ -1,6 +1,6 @@
 let table = document.createElement('table');
 
-document.body.append(table);
+document.body.appendChild(table);
 table.style.border = '3px solid red';
 
 for (let i = 1; i <= 10; i++) {
