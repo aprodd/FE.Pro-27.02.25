@@ -1,14 +1,14 @@
-function Student(name, lastname, birthday, rating) {
+function Student(name, lastname, birthYear, rating) {
     this.name = name;
     this.lastname = lastname;
-    this.birthday = birthday;
+    this.birthYear = birthYear;
     this.rating = rating;
     this.visiting = [];
 }
 
 Student.prototype.getAge = function() {
     let currentYear = new Date().getFullYear();
-    let age = currentYear - this.birthday;
+    let age = currentYear - this.birthYear;
 
     return `${this.name} ${this.lastname}: ${age} років`;
 };
